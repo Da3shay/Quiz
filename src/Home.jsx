@@ -47,13 +47,14 @@ const useStyles = makeStyles({
 
 
 
-export default function Home({setval,val}) {
+export default function Home({setval,val,namee,setnamee}) {
     const classes = useStyles();
    const [name, setname] = useState('');
    
    const submit= ((e) =>{ 
     
-    setname(e)
+    setname(e);
+    setnamee(e);
   
    }
 )

@@ -24,7 +24,7 @@ const useStyles = makeStyles({
   
   });
 
-export default function Quiz({setval,val}) {
+export default function Quiz({setval,val,namee,setnamee}) {
     const classes = useStyles();
 
 
@@ -38,6 +38,7 @@ export default function Quiz({setval,val}) {
         setCurrentQuestion(0);
         setShowScore(false);
         setScore(0);
+        setnamee('');
       
         })
 
@@ -71,7 +72,7 @@ export default function Quiz({setval,val}) {
             <div className='score-section'>
                 <div style={{marginBottom:"20px"}}>
 
-                You scored {score} out of {questions.length}
+               {namee} You scored {score} out of {questions.length}
           
               
             
@@ -94,7 +95,7 @@ export default function Quiz({setval,val}) {
                 <div className='answer-section'>
                     {questions[currentQuestion].answerOptions.map((answerOption) => (
                     
-                    <button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+                    <button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText }</button>
                     ))}
                 </div>
             </>
